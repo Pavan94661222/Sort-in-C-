@@ -1,0 +1,35 @@
+Selection Sort Algorithm
+Initialize:Start from the first element of the array.Find the Minimum Element:
+For the current position i, find the minimum element in the unsorted portion of the array (from i to n-1).
+Swap:Swap the found minimum element with the element at position i.
+Repeat:Move to the next position (i = i + 1) and repeat steps 2 and 3 until the entire array is sorted.
+Insertion Sort Algorithm
+Initialize:Start from the second element (index 1) of the array.
+Select the Element:Consider the current element as the key element.
+Shift Elements:Compare the key element with elements in the sorted part of the array (to its left).
+Shift elements of the sorted part that are greater than the key element one position to the right.
+Insert:Insert the key element into its correct position.
+Repeat:Move to the next element (i = i + 1) and repeat steps 2-4 until the entire array is sorted.
+Function Prototypes:
+void selectionSort(int arr[], int n);: This function implements the selection sort algorithm.
+void insertionSort(int arr[], int n);: This function implements the insertion sort algorithm.
+void printArray(int arr[], int n);: This function prints the elements of the array.
+Main Function:Initializes two arrays arr1 and arr2 with the same unsorted integers.
+Calculates the size of the arrays n.
+Prints the original array using printArray.
+Calls selectionSort to sort arr1 and prints the sorted array.
+Calls insertionSort to sort arr2 and prints the sorted array.
+Selection Sort Function:Loops through the array, finds the minimum element in the unsorted part, and swaps it with the first unsorted element.
+Insertion Sort Function:Loops through the array starting from the second element, inserts the current element into its correct position in the sorted part of the array.
+Print Array Function:Loops through the array and prints each element followed by a space, and prints a newline at the end.
+This simple C program demonstrates both the selection sort and insertion sort algorithms with clear, commented code to help understand the sorting processes. You can compile and run this program to see how each sorting algorithm works.
+
+
+
+
+
+
+
+Message ChatGPT
+
+ChatGPT can make mistakes. Check important
