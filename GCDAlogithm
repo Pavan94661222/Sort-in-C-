@@ -1,0 +1,59 @@
+GCD Calculation using Euclid's Algorithm:
+Start:
+
+Input:
+
+Initialize variables num1 and num2 with given values (e.g., num1 = 10, num2 = 5).
+Euclid's Algorithm:
+
+While num2 is not equal to 0:
+Calculate remainder as the modulus of num1 divided by num2.
+Set num1 to the current value of num2.
+Set num2 to the value of remainder.
+Continue until num2 becomes 0.
+Calculate GCD:
+
+After the loop, num1 will hold the GCD of the original num1 and num2.
+Output:
+
+Print the calculated GCD.
+End.
+
+Detailed Steps:
+Initialization:
+
+Initialize num1 to 10 and num2 to 5.
+Declare variables gcd and remainder.
+Euclid's Algorithm:
+
+Enter a loop:
+Calculate remainder as num1 % num2.
+Update num1 to the current value of num2.
+Update num2 to the value of remainder.
+Repeat until num2 becomes 0.
+GCD Calculation:
+
+After the loop, num1 will hold the GCD of the original num1 and num2.
+Assign the value of num1 to gcd.
+Output:
+
+Print the values of num1, num2, and gcd as the GCD of the given numbers.
+Pseudocode:
+plaintext
+Copy code
+procedure calculateGCD(num1, num2)
+    while num2 != 0
+        remainder = num1 % num2
+        num1 = num2
+        num2 = remainder
+    end while
+    gcd = num1
+end procedure
+
+main()
+    num1 = 10
+    num2 = 5
+    calculateGCD(num1, num2)
+    print "GCD of " + num1 + " and " + num2 + " is " + gcd
+end main
+This algorithm outlines the steps involved in calculating the GCD using Euclid's Algorithm, as implemented in the given program.
