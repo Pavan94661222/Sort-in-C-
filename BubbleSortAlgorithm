@@ -1,0 +1,88 @@
+Bubble Sort Algorithm:
+Start:
+
+Input:
+
+Accept an integer array arr[] of size n.
+Outer Loop:
+
+Iterate i from 0 to n-1.
+This loop ensures that after each iteration, the largest element gets placed at its correct position from the end.
+Inner Loop:
+
+Iterate j from 0 to n-i-1.
+This loop iterates over the array elements, comparing adjacent elements.
+Comparison:
+
+Compare arr[j] and arr[j+1].
+If arr[j] is greater than arr[j+1], swap them.
+Swap Function:
+
+Create a function swap() to swap two elements in the array.
+Parameters: array arr[], indices i and j.
+Swap arr[i] and arr[j].
+Sorted Check:
+
+After completing each iteration of the inner loop, check if any swap occurred.
+If no swaps occurred in a particular pass, the array is already sorted, and we can exit the sorting process.
+Output:
+
+After sorting the array, print the sorted array.
+End.
+
+Detailed Steps:
+Initialization:
+
+Declare variables i, j for loop control and temp for swapping.
+Outer Loop (i):
+
+Iterate i from 0 to n-1.
+Inner Loop (j):
+
+Iterate j from 0 to n-i-1.
+Comparison and Swap:
+
+Compare arr[j] and arr[j+1].
+If arr[j] > arr[j+1], swap them using the swap() function.
+Check Sorted:
+
+After each pass of the inner loop, check if any swaps occurred.
+If no swaps occurred in a pass, the array is sorted, and the process can be stopped.
+Output:
+
+Print the sorted array.
+Pseudocode:
+plaintext
+Copy code
+procedure bubbleSort(arr[], n)
+    for i = 0 to n-1
+        for j = 0 to n-i-1
+            if arr[j] > arr[j+1]
+                swap(arr, j, j+1)
+            end if
+        end for
+        if no swaps occurred
+            break
+        end if
+    end for
+end procedure
+
+procedure swap(arr[], i, j)
+    temp = arr[i]
+    arr[i] = arr[j]
+    arr[j] = temp
+end procedure
+
+main()
+    arr[] = {5, 1, 4, 2, 8}
+    n = size of arr
+    bubbleSort(arr, n)
+    print "Sorted array: "
+    for i = 0 to n-1
+        print arr[i] + " "
+    end for
+end main
+This algorithm outlines the steps involved in the Bubble Sort algorithm implemented in the given program.
+
+
+
