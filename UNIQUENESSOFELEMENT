@@ -1,0 +1,68 @@
+Algorithm to Check if All Elements in an Array are Distinct
+Step 1: Define the Comparison Function
+Function Name: compare
+Input: Two void pointers, a and b, which will be cast to int pointers.
+Operation:
+Cast the void pointers to int pointers.
+Dereference the pointers to get the integer values.
+Return the difference between the two integers (*a - *b).
+This function helps the qsort function to sort the array in ascending order.
+Step 2: Define the Function to Check for Distinct Elements
+Function Name: areDistinct
+Input: An integer array arr and an integer n representing the number of elements in the array.
+Operation:
+Use the qsort function to sort the array in ascending order.
+Iterate through the sorted array from the second element to the last element:
+Check if the current element is equal to the previous element.
+If any two adjacent elements are equal, return false indicating not all elements are distinct.
+If the loop completes without finding any duplicates, return true indicating all elements are distinct.
+Step 3: Main Function to Test the areDistinct Function
+Define an Array: Initialize an integer array arr with some values.
+Determine the Size of the Array: Calculate the number of elements in the array n.
+Check for Distinct Elements:
+Call the areDistinct function with the array arr and its size n.
+If the function returns true, print "All elements are distinct."
+If the function returns false, print "Not all elements are distinct
+Summary
+Step 1: Implement a comparison function for sorting.
+Step 2: Implement the areDistinct function to check for distinct elements.
+Step 3: Test the areDistinct function in the main function.
+The algorithm effectively checks if all elements in an array are distinct by first sorting the array and then checking for duplicates among adjacent elements.
+
+
+PROGRAM
+#include <stdio.h>
+#include <stdbool.h>
+
+// Function to compare two integers for qsort
+int compare(const void *a, const void *b) {
+    return (*(int *)a - *(int *)b);
+}
+
+// Function to check if all elements in the array are distinct
+bool areDistinct(int arr[], int n) {
+    // Sort the array
+    qsort(arr, n, sizeof(int), compare);
+
+    // Check for adjacent elements that are equal
+    for (int i = 1; i < n; i++) {
+        if (arr[i] == arr[i - 1]) {
+            return false; // Not all elements are distinct
+        }
+    }
+
+    return true; // All elements are distinct
+}
+
+int main() {
+    int arr[] = {1, 3, 2, 4}; // Example array
+    int n = sizeof(arr) / sizeof(arr[0]);
+
+    if (areDistinct(arr, n)) {
+        printf("All elements are distinct.\n");
+    } else {
+        printf("Not all elements are distinct.\n");
+    }
+
+    return 0;
+}
